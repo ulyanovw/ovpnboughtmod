@@ -269,7 +269,9 @@ updating_the_dirs(){
 		cp /root/NPB4* /home/Sulik/
 		echo -e "Конфигурации обновлены успешно!"
 	elif [[ ${choose} == "3" ]]; then
-		echo -e "Еще не стартовали..."
+		#обновление конфигураций после пердела NPB5
+		rm /home/Ilyas/NPB5*
+		cp /root/NPB5* /home/Ilyas/
 	else
 		echo -e "${Error} Введите корректный номер(1-3)" && exit 1
 	fi
